@@ -20,6 +20,7 @@ import com.example.app.javatechie.spring.auth.example.CRA.CRA;
 import com.example.app.javatechie.spring.auth.example.CRA.CRAService;
 import com.example.app.javatechie.spring.auth.example.CRA.DTOCRA;
 import com.example.app.javatechie.spring.auth.example.client.Client;
+import com.example.app.javatechie.spring.auth.example.mission.Mission;
 
 
 @CrossOrigin(origins = "localhost:4200")
@@ -37,8 +38,7 @@ public class CRAController {
 	    	String id=CRAService.addCRA(dto);
 	    	return id;      
 	    }
-	    
-	    
+	        
 	    @GetMapping
 	    public List<CRA> getAll() {
 	        return CRAService.findAll();
@@ -49,10 +49,7 @@ public class CRAController {
 	    public CRA get(@PathVariable("id") Integer id) {
 	    	return CRAService.findById(id);
 	    }
-	    
-	    
-	    
-	    
+	    	    	    	  
 	    @ResponseBody
 	    @PutMapping("/updateCRA/{id}")
 
@@ -74,12 +71,14 @@ public class CRAController {
 	    }
 	 
 	   @ResponseBody
-
 	    @DeleteMapping("/deleteCRA/{id}")
-
 	    public void delete(@PathVariable("id") int id) {
-
 		   CRAService.delete(id);
-
 	    }	
+	   	   
+	   @GetMapping("/user/{id}")
+	   public ResponseEntity<List<CRA>> getCraByUserId(@PathVariable("id") int id) {
+		   List<CRA> c = CRAService.getCraByMissionId(id);
+		   return new ResponseEntity<>( c , HttpStatus.OK);
+	   }
 }

@@ -3,6 +3,7 @@ package com.example.app.javatechie.spring.auth.example.salaries;
 
 
 import java.util.List;
+
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,16 +69,13 @@ public class MyServiceSalariesImp implements MyServiceSalaries {
     }
     
     
-    
     @Override
     public Salaries save(Salaries Salaries) {
 
     	SalariesRepository.save(Salaries);
 
         return Salaries;
-
     }
-
 
     @Override
     public Salaries update(int id, Salaries updatedSalaries) {
@@ -133,6 +131,5 @@ public class MyServiceSalariesImp implements MyServiceSalaries {
 
 	}
    
-
-
+   
 }

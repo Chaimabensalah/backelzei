@@ -73,19 +73,15 @@ import com.example.app.javatechie.spring.auth.example.salaries.SalariesRepositor
 	    	Mission existingMission = findById(id);
 
             if (existingMission != null) {
-
-           
-
             	
-            	  existingMission.setCodemission(updatedMission.getCodemission());
+            	existingMission.setCodemission(updatedMission.getCodemission());
       	        existingMission.setDatedebut(updatedMission.getDatedebut());
       	        existingMission.setDatefin(updatedMission.getDatefin());
-      	        existingMission.setTjm(updatedMission.getTjm());
       	        existingMission.setTjm(updatedMission.getTjm());
       	        existingMission.setClientid(updatedMission.getClientid());
       	        existingMission.setSalariesid(updatedMission.getSalariesid());
             	         
-            	return missionRepo.save(updatedMission);
+            	return missionRepo.save(existingMission);
 
             }
 

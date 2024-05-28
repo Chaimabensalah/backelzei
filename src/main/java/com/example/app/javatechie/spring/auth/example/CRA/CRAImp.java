@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.app.javatechie.spring.auth.example.CRA.DTOCRA;
 import com.example.app.javatechie.spring.auth.example.client.Client;
+import com.example.app.javatechie.spring.auth.example.mission.Mission;
 import com.example.app.javatechie.spring.auth.example.CRA.CRA;
 
 	@Service
@@ -88,7 +89,14 @@ import com.example.app.javatechie.spring.auth.example.CRA.CRA;
         	CRARepo.delete(CRA);
 
     	}
-	    
+        
+        
+        //to create fonction getCraByMissionid
+        @Override
+        public List<CRA> getCraByMissionId(int id) {
+        	return CRARepo.findByMissionId(id);
+        	
+        }
 	}
 
 

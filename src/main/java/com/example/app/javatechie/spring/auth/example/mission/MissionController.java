@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.app.javatechie.spring.auth.example.mission.Mission;
 import com.example.app.javatechie.spring.auth.example.mission.MissionService;
+import com.example.app.javatechie.spring.auth.example.salaries.Salaries;
 import com.example.app.javatechie.spring.auth.example.client.Client;
 import com.example.app.javatechie.spring.auth.example.mission.DTOmission;
 
@@ -68,7 +69,6 @@ public class MissionController {
 	        existingMission.setDatedebut(updatMission.getDatedebut());
 	        existingMission.setDatefin(updatMission.getDatefin());
 	        existingMission.setTjm(updatMission.getTjm());
-	        existingMission.setTjm(updatMission.getTjm());
 	        existingMission.setClientid(updatMission.getClientid());
 	        existingMission.setSalariesid(updatMission.getSalariesid());	        	       
 	        Mission c = missionService.update(id,updatMission);
@@ -91,6 +91,7 @@ public class MissionController {
 		   return new ResponseEntity<>( c , HttpStatus.OK);
 	   }
 	   
+	  
 	   
 	   }
 	   

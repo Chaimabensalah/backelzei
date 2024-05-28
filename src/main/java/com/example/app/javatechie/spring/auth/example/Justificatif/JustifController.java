@@ -153,7 +153,7 @@ public class JustifController {
 
 	        
 	        String netpayeLine = lines[94]; // Adjust the index if needed
-	        String subString4 = netpayeLine.substring(11, 25); // La position de début est incluse et la position de fin est exclusive
+	        String subString4 = netpayeLine.substring(11, 20); // La position de début est incluse et la position de fin est exclusive
 	        pdf.setNetpaye(subString4);
 	        return pdf;
 	    }

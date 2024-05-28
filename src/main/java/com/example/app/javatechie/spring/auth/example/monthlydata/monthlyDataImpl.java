@@ -28,13 +28,19 @@ import com.example.app.javatechie.spring.auth.example.monthlydata.monthlyData;
 	    	
 	    	   monthlyData MonthlyData = new monthlyData(
 	    			monthlyData.getId(),
-	    			monthlyData.getAutre(),
-	    			monthlyData.getFacture(), 
-	    			monthlyData.getTotalPercu(), 
-	    			monthlyData.getCout(),
 	    			monthlyData.getSalariesid(),
 	    			monthlyData.getMissionid(),
-	    			monthlyData.getCraid()
+	    			monthlyData.getCraid(),
+	    			monthlyData.getFacture(), 
+	    			monthlyData.getAutre(),
+	    			monthlyData.getTotalPercu(), 
+	    			monthlyData.getCout(),
+	    			monthlyData.getFraisrepas(),
+	    			monthlyData.getFraiskilo(),
+	    			monthlyData.getChargesalarial(),
+	    			monthlyData.getChargeannexe()
+	    						    			
+	    			    		
 	                );	           	    		    	
 	    	monthlyDataRepo.save(monthlyData);
 	        // Return the ID of the saved simulator, or adjust based on your logic:
